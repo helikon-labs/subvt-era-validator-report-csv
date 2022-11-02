@@ -5,8 +5,8 @@ let endEraIndex = 4391;
 
 async function getReports() {
     for (let eraIndex = startEraIndex; eraIndex <= endEraIndex; eraIndex++) {
-        //const url = `https://api-test.polkadot.subvt.io:18900/report/era/${eraIndex}/validator/active`;
-        const url = `https://api-test.kusama.subvt.io:17900/report/era/${eraIndex}/validator/active`;
+        //const url = `https://api.polkadot.subvt.io:18900/report/era/${eraIndex}/validator/active`;
+        const url = `https://api.kusama.subvt.io:17900/report/era/${eraIndex}/validator/active`;
         let settings = { method: "GET" };
         const response = await fetch(url, settings);
         const eraReport = await response.json();
